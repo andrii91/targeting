@@ -1,0 +1,323 @@
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-width: 0;
+  background-color: #39579b;
+  box-shadow: 0 -30px 30px rgba(12, 12, 15, 0.3);
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar-track {
+  border-width: 1px;
+  background-color: #29427d;
+  border-color: #29427d;
+}
+
+@font-face {
+  font-family: 'Futura Futuris C';
+  src: url('../fonts/FuturaFuturisC.eot');
+  src: local('☺'), url('../fonts/FuturaFuturisC.woff') format('woff'), url('../fonts/FuturaFuturisC.ttf') format('truetype'), url('../fonts/FuturaFuturisC.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura Futuris C';
+  src: url('../fonts/FuturaFuturisC-Bold.eot');
+  src: local('☺'), url('../fonts/FuturaFuturisC-Bold.woff') format('woff'), url('../fonts/FuturaFuturisC-Bold.ttf') format('truetype'), url('../fonts/FuturaFuturisC-Bold.svg') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*************** SCROLLBAR BASE CSS ***************/
+
+.scroll-wrapper {
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: relative;
+}
+
+.scroll-wrapper > .scroll-content {
+  border: none !important;
+  box-sizing: content-box !important;
+  height: auto;
+  left: 0;
+  margin: 0;
+  max-height: none;
+  max-width: none !important;
+  overflow: scroll !important;
+  padding: 0;
+  position: relative !important;
+  top: 0;
+  width: auto !important;
+}
+
+.scroll-wrapper > .scroll-content::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+
+.scroll-element {
+  display: none;
+}
+
+.scroll-element,
+.scroll-element div {
+  box-sizing: content-box;
+}
+
+.scroll-element.scroll-x.scroll-scrollx_visible,
+.scroll-element.scroll-y.scroll-scrolly_visible {
+  display: block;
+}
+
+.scroll-element .scroll-bar,
+.scroll-element .scroll-arrow {
+  cursor: default;
+}
+
+.scroll-textarea {
+  border: 1px solid #cccccc;
+  border-top-color: #999999;
+}
+
+.scroll-textarea > .scroll-content {
+  overflow: hidden !important;
+}
+
+.scroll-textarea > .scroll-content > textarea {
+  border: none !important;
+  box-sizing: border-box;
+  height: 100% !important;
+  margin: 0;
+  max-height: none !important;
+  max-width: none !important;
+  overflow: scroll !important;
+  outline: none;
+  padding: 2px;
+  position: relative !important;
+  top: 0;
+  width: 100% !important;
+}
+
+.scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+
+
+
+
+/*************** SIMPLE INNER SCROLLBAR ***************/
+
+.scrollbar-inner > .scroll-element,
+.scrollbar-inner > .scroll-element div {
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 10;
+}
+
+.scrollbar-inner > .scroll-element div {
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.scrollbar-inner > .scroll-element.scroll-x {
+  bottom: 2px;
+  height: 8px;
+  left: 0;
+  width: 100%;
+}
+
+.scrollbar-inner > .scroll-element.scroll-y {
+  height: 100%;
+  left: 2px;
+  top: 0;
+  width: 8px;
+}
+
+.scrollbar-inner > .scroll-element .scroll-element_outer {
+  overflow: hidden;
+}
+
+.scrollbar-inner > .scroll-element .scroll-element_outer,
+.scrollbar-inner > .scroll-element .scroll-element_track,
+.scrollbar-inner > .scroll-element .scroll-bar {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.scrollbar-inner > .scroll-element .scroll-element_track,
+.scrollbar-inner > .scroll-element .scroll-bar {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  filter: alpha(opacity=40);
+  opacity: 1;
+}
+
+.scrollbar-inner > .scroll-element .scroll-element_track {
+  background-color: #29427d;
+}
+
+.scrollbar-inner > .scroll-element .scroll-bar {
+  background-color: #fff;
+box-shadow: 0 -30px 30px rgba(12, 12, 15, 0.3);
+border-radius: 8px;
+}
+
+.scrollbar-inner > .scroll-element:hover .scroll-bar {
+  background-color: #fff;
+}
+
+.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar {
+    box-shadow: 0 -30px 30px rgba(12,12,15,.3);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+
+/* update scrollbar offset if both scrolls are visible */
+
+.scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track {
+  left: -12px;
+}
+
+.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track {
+  top: -12px;
+}
+
+
+.scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {
+  left: -12px;
+}
+
+.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
+  top: -12px;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1050;
+  display: none;
+  outline: 0;
+  opacity: 0;
+  background-color: #fff;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transition: all 400ms;
+  padding: 60px 0 0 ;
+  width: 70%;
+  max-width: 490px;
+  min-width: 300px;
+  height: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateX(-50%) translateY(-50%);
+  .registration-form {
+    margin: 0 auto;
+    padding: 0 20px 35px;
+  }
+}
+
+.modal-content {
+  text-align: center;
+  h4 {
+    font-size: 29px;
+    line-height: 36px;
+    margin: 30px 30px 0px;
+    color: #28292d; 
+  }
+}
+
+
+.overl-h {
+  overflow: hidden
+}
+
+
+.modal-btn {
+  cursor: pointer
+}
+
+.popup__close {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  cursor: pointer;
+  background: url('../images/close-icon.svg') no-repeat;
+  opacity: 0.5;
+  background-size: 100%;
+}
+
+.popup__close:hover {
+  opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  background: #000;
+  opacity: .62;
+  z-index: 1000
+}
+
+.registration-form {
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 44px 34px 28px;
+  text-align: center;
+  max-width: 390px;
+  h4 {
+    color: #0b090a;
+    font-size: 21px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.05px;
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+  form {
+    input, textarea {
+      color: #0b090a;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1;
+      text-align: center;
+      padding: 30px  0 26px;
+        margin-bottom: 8px;
+      display: block;
+      border-radius: 4px;
+      background-color: #f7f7f7;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+     width: 100%;
+     &:focus {
+      border-color:#5fa1ff;
+     }
+    }
+    button {
+      width: 100%;
+      margin-top: 9px;
+    }
+  }
+}
+
+
+@import 'info/bootstrap';
+@import 'info/main';
