@@ -1,8 +1,93 @@
 @import '../../mq';
 
 @media #{$tabletPortrait} {
-    @import '../mobile';
+    // @import '../mobile';
   	& {
-     
+     img {
+     	max-width: 100%;
+     }
+     .fact-info span {
+     	br {
+     		display: none;
+     	}
+     }
+     .programs-item .top .count {
+     	font-size: 18px;
+     }
+     .programs-item .top .top-img img {
+     	margin: 0 10px;
+     }
+     .head {
+     	    background-position: 66%;
+     }
+     .wherefore-title {
+     	font-size: 19px;
+     	br {
+     		display: none;
+     	}
+     }
+     .wherefore-info {
+     	font-size: 16px;
+     }
+     .wherefore-title_large {
+     	font-size: 23px;
+     }
+     .skill-title {
+     	br {
+     		display: none;
+     	}
+     }
+     .md-none {
+     	display: none;;
+     }
+     .fact-title {
+     	font-size: 28px;
+     }
+     .fact-info {
+     	br {
+     		display: block;
+     	}
+     }
+     .info-img {
+     	img {
+     		max-width: 100px;
+     	}
+     }
+     .info-content {
+     	font-size: 16px;
+     }
+     .cases-title:before, .cases-title:after {
+     	max-width: 160px;
+     }
+     .cases-item {
+     	img {
+	     	max-width: 27px;
+     		
+     	}
+     }
+     .cases-item h5 {
+	    font-size: 14px;
+	}
+	.cases-item p {
+		font-size: 10px;
+	}
+	.plans-box {
+		max-width: 330px;
+	}
+	.plans-box .price li {
+		font-size: 21px;
+	}
+
+
+		.plans-box .price-btn li.active {
+		    padding: 5px 35px;
+		}
+
+		.plans-box .price-btn li {
+		    padding: 5px 17px;
+		}
+		.order-btn {
+			font-size: 17px;
+		}
 	}
 }

@@ -1,10 +1,4 @@
 $(document).ready(function () {
-  $('.head-img img').click(function () {
-    var destination = $(".program").offset().top - 0;
-    $("body,html").animate({
-      scrollTop: destination
-    }, 500);
-  });
 
   var element = $('.questions-item.active');
   $('.questions-content').scroll(function (e) {
@@ -46,8 +40,8 @@ $(document).ready(function () {
   var sInterval = setInterval(systemInterval, 3000);
   $('.scrollbar-inner').scrollbar();
   $('.price-btn li').click(function () {
-    $('.price-btn li').removeClass('active');
-    $('.price li').removeClass('active');
+    $(this).parents('.plans-box').find('.price-btn li').removeClass('active');
+    $(this).parents('.plans-box').find('.price li').removeClass('active');
     $(this).addClass('active');
     $('#' + $(this).data('price')).addClass('active');
   });

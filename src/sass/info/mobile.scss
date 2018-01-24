@@ -1,3 +1,144 @@
 & {
-  
+  br {
+  	display: none;
+  }
+  img {
+  	max-width: 100%;
+  }
+  .head-item h1 {
+  	font-size: 26px
+  }
+  .head-item h3 {
+  	font-size: 16px;
+  }
+  .head-item h2, .head-item p {
+  	font-size: 20px;
+  }
+  .order-btn {
+  	font-size: 18px;
+  }
+  .head {
+  	background-position: 75%;
+  }
+  .head-item {
+  	margin-top: 270px;
+  }
+  .short-head h2 {
+  	font-size: 24px;
+  }
+  .questions-list {
+  	display: none;
+  }
+  .questions-item {
+  	opacity: 1;
+  }
+  .questions-content {
+  	padding-right: 10%;
+  }
+  .questions-item h4 {
+  	font-size: 13px;
+  }
+  .questions-item p {
+  	font-size: 12px;
+  }
+  .wherefore-title {
+    font-size: 20px;
+	}
+	.wherefore-info {
+		font-size: 17px;
+		line-height: 1;
+	}
+	.short-block {
+    padding: 24px 12px 0;
+	}
+	.short-item h4 {
+		font-size: 15px;
+	}
+	.short-item p {
+		font-size: 12px;
+		line-height: 1;
+	}
+	.skill-title {
+		font-size: 20px;
+	}
+	 .fact-title {
+	 	font-size: 24px;
+	 	margin-bottom: 20px;
+	 }
+	 .fact {
+	 	text-align: center;
+	 	img {
+	 		display: none;
+	 	}
+	 }
+	 .blockOne-info {
+	 	font-size: 13px;
+	 	padding-right: 17px;
+	 }
+	.programs-item {
+	 	padding-left: 0;
+	 }
+	 main {
+	 	overflow-x: hidden;
+	 }
+	 .programs-list {
+	 	padding-left: 20px;
+	 	br {
+	 		display: block;
+	 	}
+	 }
+	 .programs-list li span {
+	 	width: calc(100% - 33px);
+	 	font-size: 14px;
+	 }
+	 .programs-item .top .top-img img {
+	    margin: 0 0px;
+	    width: 24%;
+	}
+	.scrollbar-inner {
+		margin-bottom: 20px;
+	}
+	.programs-item .top h4 {
+		font-size: 18px;
+	}
+	.progrm_info-img {
+		display: none;
+	}
+	.mt-18 {
+		margin-top: 20px;
+	}
+	.cases-title {
+		&:after, &:before {
+			display: none;
+		}
+	}
+	.cases-item h5 {
+		font-size: 19px;
+		margin:  20px 0 0;
+	}
+	.plans-box.standart {
+		margin-left: 0;
+		margin-top: 20px;
+	}
+	.plans-box .price li {
+		font-size: 18px;
+	}
+	.plans-box .price-btn li {
+		font-size: 12px;
+		padding: 5px;
+		&.active {
+			padding: 5px;
+		}
+	}
+	.order-btn {
+		padding-left: 30px;
+		padding-right: 30px;
+		font-size: 17px;
+	}
+	.head.footer {
+		background-position: 40%;
+		.head-item {
+			margin-top: 0;
+		}
+	}
 }

@@ -2,4 +2,7 @@
 
 @media #{$tabletLandscape} {
     @import '../desktop';
+    .md-none {
+    	display: block;
+    }
 }
